@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block main %}
+
+<div class="recipes">
+    <div class="container mt-3 mb-3">
+        <div class="cards">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                {% for recipe in recipes %}
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="{{ recipe.photo.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ recipe.category }}</h6>
+                            <p class="card-text">{{ recipe.description|truncatewords:25 }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">🕓 {{ recipe.time }}</small>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock main %}

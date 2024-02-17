@@ -10,6 +10,10 @@ class Category(models.Model):
 
 
 class Recipes(models.Model):
+
+    def __str__(self):
+        return self.title
+
     title = models.CharField(max_length=200)
     description = models.TextField()
     time = models.CharField(max_length=50)
@@ -18,6 +22,7 @@ class Recipes(models.Model):
 
 
 class Ingredients(models.Model):
+
     recipe = models.ForeignKey(Recipes, on_delete=models.CASCADE)
     ingredients = models.TextField()
 
