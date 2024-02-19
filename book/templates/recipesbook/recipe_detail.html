@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block main %}
+
+{% block carousel %}
+{% endblock carousel %}
+
+
+<div class="container mt-3">
+    <div class="d-flex justify-content-between">
+        <div class="col-7">
+            <div class="card mb-3">
+                <img src="{{ recipe.photo.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipe.title }}</h5>
+                    <p class="card-text">{{ recipe.description }}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Ингредиенты</h5>
+                    <p class="card-text">kkkkk</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container mt-3">
+    <div class="card text-center">
+        <div class="card-header">
+            ИНСТРУКЦИЯ
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Как готовить?</h5>
+            <p class="card-text">...</p>
+        </div>
+        <div class="card-footer text-muted">
+            блюдо
+        </div>
+    </div>
+</div>
+
+
+{% endblock main %}

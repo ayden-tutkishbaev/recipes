@@ -12,4 +12,5 @@ admin.site.register(Ingredients)
 admin.site.register(Instructions)
 
 
+
 # Register your models here.

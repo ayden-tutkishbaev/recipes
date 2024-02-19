@@ -17,7 +17,7 @@ class Recipes(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     time = models.CharField(max_length=50)
-    photo = models.ImageField(upload_to='recipes/', null=True, blank=True)
+    photo = models.ImageField(upload_to='static/book/images', null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 
